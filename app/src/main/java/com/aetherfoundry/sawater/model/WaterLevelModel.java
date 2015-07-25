@@ -9,6 +9,8 @@ package com.aetherfoundry.sawater.model;
 import javax.annotation.*;
 import com.google.gson.annotations.Expose;
 
+import java.util.Date;
+
 
 public class WaterLevelModel {
 
@@ -19,10 +21,18 @@ public class WaterLevelModel {
     @Expose
     private boolean irrigationAllowed;
 
+    private Date myDate;
+
     public WaterLevelModel(Level level, long stageLevel, boolean irrigationAllowed){
         this.level=level;
         this.stageLevel=stageLevel;
         this.irrigationAllowed=irrigationAllowed;
+        this.myDate= new Date();
+    }
+
+    public WaterLevelModel()
+    {
+        this.myDate= new Date();
     }
 
     /**
@@ -78,6 +88,11 @@ public class WaterLevelModel {
      */
     public void setIrrigationAllowed(boolean irrigationAllowed) {
         this.irrigationAllowed = irrigationAllowed;
+    }
+
+    public Date getMyDate()
+    {
+        return myDate;
     }
 
 }

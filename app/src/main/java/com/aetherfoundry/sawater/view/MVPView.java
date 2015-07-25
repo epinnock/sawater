@@ -11,4 +11,5 @@ public interface MVPView {
     void update(WaterLevelModel wm);
     void progressBarUpdate(boolean b);
     void injectPresenter(MVPPresenter myPresenter);
+    void error(String message);
 }

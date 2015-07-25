@@ -37,6 +37,7 @@ public class FancyTest {
         myActivity=mActivityRule.get();
         myMockPresenter=new SAPresenterMock();
         myActivity.injectPresenter(myMockPresenter);
+        myMockPresenter.injectView(myActivity);
     }
 
     @Test
@@ -54,6 +55,7 @@ public class FancyTest {
     public void getWaterLevel() throws Exception{
         onView(withId(R.id.button)).perform(click());
 
-        onView(withId(R.id.currentWaterLevel)).check(matches(withText("")));
+        onView(withId(R.id.currentWaterLevel)).check(matches(withText("500.0 ft")));
+
     }
 }

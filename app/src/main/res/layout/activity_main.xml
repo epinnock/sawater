@@ -9,8 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="CurrentWaterLevel"
-        android:id="@+id/textView"
+        android:id="@+id/averageLevel"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="81dp" />
@@ -19,7 +18,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text=""
         android:id="@+id/currentWaterLevel"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -28,7 +26,7 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="@string/refresh"
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
@@ -38,9 +36,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/textView3"
-        android:layout_below="@+id/textView"
+        android:id="@+id/stageLevel"
+        android:layout_below="@+id/averageLevel"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="66dp" />
 
@@ -48,10 +45,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Small Text"
-        android:id="@+id/textView4"
+        android:text=""
+        android:id="@+id/updateTime"
         android:layout_alignTop="@+id/button"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/current"
+        android:id="@+id/textView"
+        android:layout_below="@+id/currentWaterLevel"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/average"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/averageLevel"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

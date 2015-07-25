@@ -37,7 +37,7 @@ public class SAPresenter implements MVPPresenter {
                    .observeOn(AndroidSchedulers.mainThread())
                    .subscribe((waterlevels)->{ if(myView!=null)
                                                 myView.update(waterlevels);}
-                   );
+                   ,(e)->{myView.error(e.getMessage());});
 
 
             //myView.update(currentWaterLevelModel);
